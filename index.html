@@ -74,6 +74,7 @@
     </main>
 
     <script>
+      // add commented code for changing color/size/width etc. 
       // attach the leaflet map to the div with id "map"
       const map = L.map("map").setView([55.9533, -3.1883], 5);
 
@@ -195,6 +196,8 @@
             .attr("cy", (d) => y(d.count))
             .attr("r", 3)
             .attr("fill", "steelblue");
+
+            // add slider for the timeline
         })
         .catch((error) => {
           console.error("Error loading JSON:", error);
