@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Humanities Visualization</title>
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        padding: 1rem;
+        background: #f5f5f5;
+        border-bottom: 1px solid #ddd;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: calc(100vh - 70px);
+      }
+
+      /* Leaflet map */
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+
+      /* D3 visualization area */
+      #viz {
+        padding: 1rem;
+        overflow: auto;
+      }
+
+      svg {
+        width: 100%;
+        height: 600px;
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Digital Humanities Visualization</h1>
+      <p>D3.js + Leaflet starter project</p>
+    </header>
+
+    <main>
+      <div id="map"></div>
+      <div id="viz">
+        <h2>D3 Visualization</h2>
+        <svg id="chart"></svg>
+      </div>
+    </main>
+
+    <script>
+      // ======================
+      // LEAFLET MAP
+      // ======================
+
+      const map = L.map("map").setView([55.9533, -3.1883], 5);
+
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; OpenStreetMap contributors",
+      }).addTo(map);
+
+      // Example marker
+      L.marker([55.9533, -3.1883])
+        .addTo(map)
+        .bindPopup("University of Edinburgh");
+
+      // ======================
+      // D3 EXAMPLE
+      // ======================
+
+      const svg = d3.select("#chart");
+
+      svg.append("circle").attr("cx", 150).attr("cy", 150).attr("r", 50);
+
+      svg
+        .append("text")
+        .attr("x", 150)
+        .attr("y", 155)
+        .attr("text-anchor", "middle")
+        .text("D3");
+
+      d3.json("data/students.json")
+        .then((data) => {
+          console.log("Loaded data:", data);
+
+          // Create one circle per person
+          svg
+            .selectAll("circle")
+            .data(data)
+            .join("circle")
+            .attr("cx", 100)
+            .attr("cy", (d, i) => 100 + i * 100)
+            .attr("r", 30);
+
+          // Add labels
+          svg
+            .selectAll("text")
+            .data(data)
+            .join("text")
+            .attr("x", 160)
+            .attr("y", (d, i) => 105 + i * 100)
+            .text((d) => `${d.name} (${d.year})`);
+        })
+        .catch((error) => {
+          console.error("Error loading JSON:", error);
+        });
+    </script>
+  </body>
+</html>
