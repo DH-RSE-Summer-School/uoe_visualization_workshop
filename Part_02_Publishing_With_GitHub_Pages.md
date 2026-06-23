@@ -12,7 +12,6 @@ Do **not** push changes to the teaching repository.
 
 - [What GitHub Pages does](#what-github-pages-does)
 - [Before you publish](#before-you-publish)
-- [Important: publish from your own repository](#important-publish-from-your-own-repository)
 - [Step 1: Check that your project works locally](#step-1-check-that-your-project-works-locally)
 - [Step 2: Save your latest changes](#step-2-save-your-latest-changes)
 - [Step 3: Commit and push your changes](#step-3-commit-and-push-your-changes)
@@ -24,9 +23,7 @@ Do **not** push changes to the teaching repository.
 - [Step 7: Save and wait for GitHub Pages to publish](#step-7-save-and-wait-for-github-pages-to-publish)
 - [Step 8: Open your live site](#step-8-open-your-live-site)
 - [Step 9: Share your published visualisation](#step-9-share-your-published-visualisation)
-- [How to update your published site](#how-to-update-your-published-site)
 - [Troubleshooting](#troubleshooting)
-- [Checklist](#checklist)
 - [Official GitHub help](#official-github-help)
 
 ---
@@ -59,24 +56,6 @@ Before publishing, make sure you have:
 - the visualisation working locally with Live Preview or Live Server;
 - your latest changes saved;
 - your latest changes committed and pushed to GitHub.
-
----
-
-## Important: publish from your own repository
-
-You should publish from **your own GitHub repository**, not the teaching repository.
-
-The teaching repository is:
-
-[https://github.com/DH-RSE-Summer-School/uoe_visualization_workshop](https://github.com/DH-RSE-Summer-School/uoe_visualization_workshop)
-
-You should not push changes to this teaching repository.
-
-Your own repository should look something like this:
-
-```text
-your-username/uoe_visualisation_workshop
-```
 
 ---
 
@@ -201,7 +180,7 @@ Update workshop visualisation
 
 This saves a snapshot of your changes on your computer.
 
-At this point, your changes are committed locally, but they may not yet be visible on GitHub online.
+At this point, your changes are committed locally, but are not yet be visible on GitHub online.
 
 6. Click **Push origin**.
 
@@ -257,7 +236,7 @@ In your repository on GitHub:
 ![GitHub repository Settings tab](./images/publishing/github-pages-settings.png)
 
 
-If you cannot see **Settings**, check that you are looking at your own repository, not the teaching repository.
+If you cannot see **Settings**, check that you are looking at your own repository, not the workshop repository.
 
 ---
 
