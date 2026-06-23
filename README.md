@@ -109,7 +109,7 @@ You can read this before or after the workshop:
 
 ## Session outline
 
- The session is set for approximately: **2.5 hours**
+ The session is set for approximately: **3.5 hours**
 
 | Section | Activity |
 |---|---|
