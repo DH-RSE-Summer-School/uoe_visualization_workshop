@@ -65,7 +65,7 @@ Detailed setup instructions are provided in the setup guide (Pre-workshop_00_Set
 
 Please complete the setup guide before the session if possible:
 
-[Setup before the workshop](./Pre_workshop_00_Setup.md)
+[Setup before the workshop](./Part_00_Pre_Workshop_Setup.md)
 
 You will need:
 
@@ -81,14 +81,15 @@ If you are using a managed university computer, please check in advance whether 
 
 | Files to support your progress |
 |---|
-| [Setup before the workshop](./Pre_workshop_00_Setup.md) | 
+| [Setup before the workshop](./Part_00_Pre_Workshop_Setup.md) | 
 Installation, GitHub account setup, VS Code setup, and getting the project files |
-| [Building the visualisation](./Part_01_Building_The_Visualisation.md) | 
+| [Introduction to data visualisation](./Part_01_Data_Visualization_Intro.md) | 
+Resource on visualisation concepts, interactivity, accessibility, and further reading |
+| [Building the visualisation](./Part_02_Building_The_Visualisation.md) | 
 A written guide for the hands-on coding and visualisation activity  which follows the live demonstration. This is useful for reference if you choose to have it open whilst you work (optional).|
-| [Publishing with GitHub Pages](./Part_02_Publishing_With_GitHub_Pages.md) | 
+| [Publishing with GitHub Pages](./Part_03_Publishing_With_GitHub_Pages.md) | 
 Guide for committing, pushing, and publishing your own version online. This will form written instructions for part 2 of the workshop to help guide the process. |
-| [Extra resource: Introduction to data visualisation](./Data_Visualisation_Introduction_A resource.md) | 
-Supplementary resource on visualisation concepts, interactivity, accessibility, and further reading |
+
 
 ## Supplementary visualisation resource
 
@@ -105,7 +106,7 @@ The supplementary introduction provides extra background on:
 
 You can read this before or after the workshop:
 
-[Introduction to data visualisation](./Data_Visualisation_Introduction_A_resource.md)
+[Introduction to data visualisation](./Part_01_Data_Visualization_Intro.md)
 
 ## Session outline
 
